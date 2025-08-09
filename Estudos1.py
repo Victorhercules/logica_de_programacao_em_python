@@ -7,3 +7,4 @@ print()
 aniversario = input(f"Ei {nome}, você disse que tem {idade} anos. Que dia você faz aniversário? ") # Pergunta o dia do aniversário e guarda na variavel "aniversario"
 print()
 print(f"Que legal, {nome}! Então você faz aniversário no dia {aniversario}!") # Mostra uma menssagem usando as variaveis "nome" e "aniversario"
+ 
