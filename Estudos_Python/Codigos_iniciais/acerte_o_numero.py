@@ -5,6 +5,7 @@ def pular_linha():
 
 numero = random.randint(1, 10)
 divisao = numero % 2
+vidas = 0
 
 if divisao == 0:
     produto = "par"
@@ -13,23 +14,27 @@ else:
 
 pular_linha()
 
-chute = int(input(f"Qual é o número que eu pensei?. "))
+chute = int(input("Qual é o número que eu pensei? "))
 
 pular_linha()
 
-while chute != numero:
+while chute != numero and vidas < 4:
     if chute < numero:
-        print(f"Você errou!")
-        print(f"O número é maior e {produto}.")
-        pular_linha()
-        chute = int(input(f"Qual é o número que eu pensei? "))
-        pular_linha()
+        vidas += 1
+        tamanho = "maior"
     else:
-        print(f"Você errou!")
-        print(f"O número é menor e {produto}.")
-        pular_linha()
-        chute = int(input(f"Qual é o número que eu pensei? "))
-        pular_linha()
+        vidas += 1
+        tamanho = "menor"
+    print(f"Você errou!")
+    pular_linha()
+    print(f"O número é {tamanho} e {produto}.")
+    pular_linha()
+    chute = int(input(f"Qual é o número que eu pensei? "))
+    pular_linha()
 
-print(f"Você acertou! o número é {numero}")
+
+if vidas == 4:
+    print(f"Você perdeu! O número era {numero}")
+else:
+    print(f"Você acertou! O número é {numero}")
 pular_linha()
