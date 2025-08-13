@@ -8,6 +8,7 @@ def pular_linha():
 # cria uma função que pede um número e garante que é um número
 def validar():
     pular_linha()
+    print(f"Você tem {vidas + 1} tentativas.")
     chute_t = input("Qual é o número que eu pensei? ")
     while not chute_t.isdigit():
         print("Você não digitou um número")
@@ -17,10 +18,10 @@ def validar():
     return chute_n
 
 # define as variáveis
-chute_n = validar()
 numero = random.randint(1, 10)
 divisao = numero % 2
-vidas = 4
+vidas = 4 # tá 4, mas o usuário tem 5 tentativas
+chute_n = validar()
 
 # descobre se o número aleatório é ímpar ou par
 if divisao == 0:
