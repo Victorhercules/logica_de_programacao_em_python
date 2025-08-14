@@ -1,11 +1,8 @@
-# importa a biblioteca
 import random
 
-# cria uma função para pular uma linha
 def pular_linha():
     print()
 
-# cria uma função que pede um número e garante que é um número
 def validar():
     pular_linha()
     print(f"Você tem {vidas + 1} tentativas.")
@@ -17,13 +14,11 @@ def validar():
     chute_n = int(chute_t)
     return chute_n
 
-# define as variáveis
 numero = random.randint(1, 10)
 divisao = numero % 2
-vidas = 4 # tá 4, mas o usuário tem 5 tentativas
+vidas = 4
 chute_n = validar()
 
-# descobre se o número aleatório é ímpar ou par
 if divisao == 0:
     produto = "par"
 else:
@@ -31,7 +26,6 @@ else:
 
 pular_linha()
 
-# cria um loop onde o usuário tem 5 chances de acertar
 while chute_n != numero and vidas != 0:
     if chute_n < numero:
         vidas = vidas - 1
@@ -45,7 +39,6 @@ while chute_n != numero and vidas != 0:
     chute_n = validar()
     pular_linha()
 
-# define se ele acertou ou não
 if chute_n == numero:
     print(f"Você acertou! O número é {numero}")
 else:
