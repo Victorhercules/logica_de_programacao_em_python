@@ -1,9 +1,6 @@
-
-# Cria uma função para pular uma linha
 def pular_linha():
     print()
 
-# Cria uma senha e garante que não será vazia
 senha_criada = input("Crie uma senha: ")
 while senha_criada == "":
     pular_linha()
@@ -12,7 +9,6 @@ while senha_criada == "":
 
 pular_linha()
 
-# Garante que a senha digitada não está vazia ou errada
 senha_digitada = input("Digite sua senha para entrar: ")
 while senha_digitada == "" or senha_digitada != senha_criada:
     if senha_digitada == "":

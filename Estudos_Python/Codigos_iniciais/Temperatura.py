@@ -1,7 +1,5 @@
-# Guarda a temperatura digitada na variável "temperatura"
 temperatura = int(input("Digite a temperatura: "))
 
-# Define a variável de acordo com a temperatura
 if temperatura < (18):
     variacao_temperatura = ("Frio")
 elif temperatura >= 18 and  temperatura <= 25:
