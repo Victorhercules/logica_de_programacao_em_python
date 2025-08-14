@@ -6,28 +6,28 @@ def pular_linha():
 def validar():
     pular_linha()
     print(f"Você tem {vidas + 1} tentativas.")
-    chute_t = input("Qual é o número que eu pensei? ")
-    while not chute_t.isdigit():
+    chute_string = input("Qual é o número que eu pensei? ")
+    while not chute_string.isdigit():
         print("Você não digitou um número")
         pular_linha()
-        chute_t = input("Qual é o número que eu pensei? ")
-    chute_n = int(chute_t)
-    return chute_n
+        chute_string = input("Qual é o número que eu pensei? ")
+    chute_numero = int(chute_string)
+    return chute_numero
 
 numero = random.randint(1, 10)
-divisao = numero % 2
+divisao_numero = numero % 2
 vidas = 4
-chute_n = validar()
+chute_numero = validar()
 
-if divisao == 0:
+if divisao_numero == 0:
     produto = "par"
 else:
     produto = "ímpar"
 
 pular_linha()
 
-while chute_n != numero and vidas != 0:
-    if chute_n < numero:
+while chute_numero != numero and vidas != 0:
+    if chute_numero < numero:
         vidas = vidas - 1
         tamanho = "maior"
     else:
@@ -36,10 +36,10 @@ while chute_n != numero and vidas != 0:
     print(f"Você errou!")
     pular_linha()
     print(f"O número é {tamanho} e {produto}.")
-    chute_n = validar()
+    chute_numero = validar()
     pular_linha()
 
-if chute_n == numero:
+if chute_numero == numero:
     print(f"Você acertou! O número é {numero}")
 else:
     print(f"Você perdeu! O número era {numero}")
