@@ -25,14 +25,14 @@ if divisao_numero == 0:
 else:
     produto = "ímpar"
 
-while chute_numero != numero and vidas > 0:
+while chute_numero != numero:
     vidas -= 1
     if vidas == 0:
         break
     elif chute_numero < numero:
         print(f"Você errou! O número é maior e {produto}.\n")
     else:
-        print(f"Você errou! O número é menor e {produto}\n.")
+        print(f"Você errou! O número é menor e {produto}.\n")
     print(f"Você tem {vidas} tentativas.")
     chute_numero = validar()
 
